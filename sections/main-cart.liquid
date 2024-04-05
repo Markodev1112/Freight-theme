@@ -9,24 +9,12 @@
     width: 90%;
     margin: auto;
   }
-  button#search_postcode {
-    display: inline-block;
-    background-color: #c4d5a9;
-    color: #111;
-    border: 1px solid #111111;
-    height: auto;
-    width: auto;
-    padding: 18px 30px;
-    line-height: 1.25em;
-    vertical-align: top;
-    font-weight: 400;
-  }
   .Panel__Title {
     margin-bottom: 20px;
   }
   @media(max-width:768px) {
     .custom-cart .custom-page {
-      width: 100%;
+      width: 100% !important;
     }
     .product-list .pallet {
       padding-top: 20px;
@@ -476,7 +464,21 @@
         </div>
       </div>
       <div class="t subtotal-row weight">
-        <p class="cart-policy">Ink.moms, <a href="/policies/shipping-policy" style="color:#d6591f; font-weight:500;">frakt</a> beräknas i kassan.</p>
+        {% comment %} <p class="cart-policy">Ink.moms, <a href="/policies/shipping-policy" style="color:#d6591f; font-weight:500;">frakt</a> beräknas i kassan.</p> {% endcomment %}
+        <div class="policy-modal">
+          <p class="cart-policy">Leverans- och fraktinformation</p>   
+
+          <a href="#demo-modal" class="material-icons ">i</a>
+          <div id="demo-modal" class="modal">
+            <div class="modal__content ">
+              <span>
+                Vid beställning under 2500 kg kan Er lossning ske med bakgavellift. Lossning sker vid tomtgräns. Över 2500 kg sker alltid lossning med truck eller kranbil. Inför leverans med truck eller kranbil kan Ni få Era produkter avställda där Ni vill enligt överenskommelse med chauffören. Önskar Ni leverans med kranbil eller truck, och ordern understiger 2500 kg, vänligen kontakta Kundtjänst på 0775-15 20 25.
+              </span>
+              <a href="#" class="modal__close">×</a>
+            </div>
+          </div>     
+          
+        </div>
         <p class="total-weight">
           <span>Totalvikt: </span>
           <script>{{ total_weight | json }}</script>
@@ -484,7 +486,7 @@
         </p>
         
       </div>
-      
+
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when '@app' -%}
@@ -513,6 +515,10 @@
           {% endif %}
         </p>
       {% endif %}
+
+      <div id="shipzip">
+      {% render 'shipzip' %}
+    </div>
 
       {% if section.settings.show_tax_and_shipping %}
         {%- capture taxes_shipping_checkout -%}

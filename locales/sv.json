@@ -218,7 +218,7 @@
       "update": "Uppdatera kundvagnen ",
       "continue": "Fortsätt handla",
       "subtotal": "Delsumma",
-      "taxes_included_and_shipping_policy_html": "Inkl. moms. <a href=\"{{ link }}\">Frakt<\/a> räknas ut i kassan",
+      "taxes_included_and_shipping_policy_html": "Priser inklusive moms.",
       "taxes_included_but_shipping_at_checkout": "Frakt räknas ut i kassan",
       "taxes_and_shipping_policy_at_checkout_html": "Moms och <a href=\"{{ link }}\">frakt<\/a> räknas ut i kassan",
       "taxes_and_shipping_at_checkout": "Frakt räknas ut i kassan",
@@ -466,7 +466,7 @@
         "no_taxes_banner_content": "Moms debiteras inte på denna order. När du väl har accepterat betalningen, kan moms inte längre läggas till."
       },
       "delivery_options": {
-        "ship": "Frakt med trucklossning",
+        "ship": "Fraktkostnad",
         "pick_up": "Hämta på vårt lager"
       }
     },

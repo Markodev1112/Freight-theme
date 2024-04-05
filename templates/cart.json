@@ -15,33 +15,9 @@
         "show_alternative_pricing": true,
         "show_alternative_pricing_over_price": true
       }
-    },
-    "1712065518d0fd4492": {
-      "type": "apps",
-      "blocks": {
-        "shipping_delivery_shipzip_cs_shipping_calculator_RxrpCB": {
-          "type": "shopify:\/\/apps\/shipping-delivery-shipzip\/blocks\/cs-shipping-calculator\/1a3d1068-6186-4cb9-936d-3cbb65a9de24",
-          "settings": {
-            "ship_title": "Check Delivery:",
-            "ship_placeholder": "Postcode",
-            "ship_btn": "Check",
-            "ship_err": "Sorry! Shipping not available for this location.",
-            "ship_err_req": "Please enter a valid zipcode",
-            "country_code": "",
-            "state": ""
-          }
-        }
-      },
-      "block_order": [
-        "shipping_delivery_shipzip_cs_shipping_calculator_RxrpCB"
-      ],
-      "settings": {
-        "skip_container": false
-      }
     }
   },
   "order": [
-    "main",
-    "1712065518d0fd4492"
+    "main"
   ]
 }
